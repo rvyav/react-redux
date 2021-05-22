@@ -1,7 +1,6 @@
 
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { apiData } from "../data";
 import { profilesList } from "../actions/profileDataActions";
 import { Link } from 'react-router-dom';

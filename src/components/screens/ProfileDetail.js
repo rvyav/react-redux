@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { apiData } from "../data";
+import { useDispatch } from "react-redux";
+import { profilesDetails } from "../actions/profileDataActions";
 
 const ProfileDetail = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(profilesDetails(id));
+  }, []);
 
   return (
     <div className="App">
