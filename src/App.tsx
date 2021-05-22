@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { apiData } from "./components/Data";
-import { profilesList } from "../src/components/actions/profileDataActions";
+import { Container } from "react-bootstrap";
+import Home from "./components/screens/Home";
+import ProfileList from "./components/screens/ProfileList";
+import ProfileDetail from "./components/screens/ProfileDetail";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 const App = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(profilesList());
-  }, [dispatch]);
 
   return (
-    <div className="App mt-5 ml-5">
-      Current data:
-      <ul>
-       {apiData.map(profile=>(
-         <li key={profile.id}>{profile.fullName} {profile.gender} {profile.citizenship} {profile.isActive}</li>
-       ))}
-     </ul>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/profile/" component={ProfileList}/>
+        <Route exact path="/profile/:id" component={ProfileDetail}/>
+      </Switch>
+    </Router>
   );
 }
 

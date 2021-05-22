@@ -1,4 +1,4 @@
-import { apiDataType } from "./Types";
+import { apiDataType } from "./types";
 
 export const apiData: Array<apiDataType> = [
     {
