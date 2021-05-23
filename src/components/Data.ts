@@ -38,7 +38,7 @@ export const apiData: Array<apiDataType> = [
     },
     {
       "id": 6,
-      "fullName": "Helena Garcia",
+      "fullName": "Jennifer Garcia",
       "gender": "M",
       "citizenship": "USA",
       "isActive": true,
