@@ -1,6 +1,6 @@
 # React Redux
 
-Simple setup of `React Redux` using:
+Simple setup and CRUD operation of `React Redux` using:
 
 - Redux-thunk
 - React Router
